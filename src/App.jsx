@@ -8,6 +8,8 @@ import TimelineSimulator from './components/TimelineSimulator';
 import BackstagePassGenerator from './components/BackstagePassGenerator';
 import NashvilleGallery from './components/NashvilleGallery';
 import EmergencySosModal from './components/EmergencySosModal';
+import PeekABooPirate from './components/PeekABooPirate';
+import HangingChainMotors from './components/HangingChainMotors';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -22,7 +24,13 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0d] text-slate-100 font-body antialiased selection:bg-amber-500 selection:text-black">
+    <div className="min-h-screen bg-[#0a0a0d] text-slate-100 font-body antialiased selection:bg-amber-500 selection:text-black relative overflow-x-hidden">
+      {/* Interactive Hanging Stage Chain Motors (Top Left & Top Right) */}
+      <HangingChainMotors />
+
+      {/* Interactive Pop-Out Peek-A-Boo Rock Pirate (Left Side Screen/Mobile) */}
+      <PeekABooPirate />
+
       {/* Navigation Bar */}
       <Navbar onOpenSos={handleOpenSos} />
 

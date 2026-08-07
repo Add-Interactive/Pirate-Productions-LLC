@@ -266,6 +266,32 @@ class SoundEngine {
       console.warn("Audio error", e);
     }
   }
+
+  playChainClink() {
+    if (this.muted) return;
+    try {
+      this.init();
+      const now = this.ctx.currentTime;
+      const times = [0, 0.08, 0.16];
+      times.forEach((t) => {
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(1200 + Math.random() * 400, now + t);
+        osc.frequency.exponentialRampToValueAtTime(400, now + t + 0.05);
+
+        gain.gain.setValueAtTime(0.1, now + t);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + t + 0.05);
+
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        osc.start(now + t);
+        osc.stop(now + t + 0.05);
+      });
+    } catch (e) {
+      console.warn("Audio error", e);
+    }
+  }
 }
 
 export const sound = new SoundEngine();
