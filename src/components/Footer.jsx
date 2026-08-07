@@ -1,5 +1,5 @@
 import React from 'react';
-import { Anchor, Compass, PhoneCall, Mail, MapPin, Zap, Shield, Heart } from 'lucide-react';
+import { Compass, PhoneCall, MapPin } from 'lucide-react';
 import { sound } from '../utils/sound';
 
 export default function Footer({ onOpenSos }) {
@@ -23,7 +23,7 @@ export default function Footer({ onOpenSos }) {
               </div>
             </div>
             <p className="text-xs text-zinc-400 leading-relaxed font-body">
-              Nashville's premier live concert, festival & corporate event staffing titan. Structure audio, intelligent lighting, 4K LED video, high steel riggers, climbers, lull telehandlers, scissor lifts & master stagehands.
+              Music City's premier live concert, festival & corporate event staffing titan. Certified production specialists for arena tours and stadium productions.
             </p>
             <div className="text-xs font-mono text-amber-400 flex items-center gap-1.5">
               <MapPin className="w-3.5 h-3.5" />
@@ -35,27 +35,23 @@ export default function Footer({ onOpenSos }) {
           <div className="space-y-3 font-heading text-lg tracking-wider">
             <div className="text-white text-xl border-b border-zinc-800 pb-2">NAVIGATION</div>
             <ul className="space-y-2 text-sm font-body">
-              <li><a href="#services" className="hover:text-amber-400 transition-colors">Crew Roster & Positions</a></li>
-              <li><a href="#stage-simulator" className="hover:text-amber-400 transition-colors">3D Stage Rigging Simulator</a></li>
-              <li><a href="#crew-calculator" className="hover:text-amber-400 transition-colors">Rate Estimator & Roster Builder</a></li>
-              <li><a href="#timeline" className="hover:text-amber-400 transition-colors">Load-In to Strike Timeline</a></li>
-              <li><a href="#gallery" className="hover:text-amber-400 transition-colors">Showcase & ETCP Certifications</a></li>
+              <li><a href="#services" className="hover:text-amber-400 transition-colors">Crew Roster & Trades</a></li>
+              <li><a href="#crew-calculator" className="hover:text-amber-400 transition-colors">Rate Estimator & Builder</a></li>
+              <li><a href="#timeline" className="hover:text-amber-400 transition-colors">Load-In Execution Timeline</a></li>
+              <li><a href="#gallery" className="hover:text-amber-400 transition-colors">Showcase & Portfolio</a></li>
             </ul>
           </div>
 
-          {/* Specialities */}
-          <div className="space-y-3">
-            <div className="text-white font-heading text-xl border-b border-zinc-800 pb-2">TRADES STAFFED</div>
-            <div className="flex flex-wrap gap-1.5 font-mono text-xs text-zinc-400">
-              <span className="px-2 py-1 bg-zinc-900 rounded border border-zinc-800">• High Steel Climbers</span>
-              <span className="px-2 py-1 bg-zinc-900 rounded border border-zinc-800">• ETCP Lead Riggers</span>
-              <span className="px-2 py-1 bg-zinc-900 rounded border border-zinc-800">• FOH & A1 Audio Engineers</span>
-              <span className="px-2 py-1 bg-zinc-900 rounded border border-zinc-800">• GrandMA3 Programmers</span>
-              <span className="px-2 py-1 bg-zinc-900 rounded border border-zinc-800">• LED Video Directors</span>
-              <span className="px-2 py-1 bg-zinc-900 rounded border border-zinc-800">• Lull & Boom Lift Ops</span>
-              <span className="px-2 py-1 bg-zinc-900 rounded border border-zinc-800">• Scissor Lift Drivers</span>
-              <span className="px-2 py-1 bg-zinc-900 rounded border border-zinc-800">• Stage Carpenters & Hands</span>
-            </div>
+          {/* Key Operations */}
+          <div className="space-y-3 font-heading text-lg tracking-wider">
+            <div className="text-white text-xl border-b border-zinc-800 pb-2">KEY OPERATIONS</div>
+            <ul className="space-y-2 text-sm font-body text-zinc-400">
+              <li>• Stadium High Steel Rigging</li>
+              <li>• Audio & FOH Mix Engineering</li>
+              <li>• Intelligent Lighting & DMX</li>
+              <li>• Heavy Machinery & Lift Ops</li>
+              <li>• 4K LED Screen Broadcast</li>
+            </ul>
           </div>
 
           {/* Dispatch Hotline Card */}
@@ -86,7 +82,7 @@ export default function Footer({ onOpenSos }) {
         {/* Bottom Credits */}
         <div className="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-zinc-500 gap-4">
           <div>
-            © {new Date().getFullYear()} Pirate Productions Nashville LLC. All Rights Reserved. Built for Live Nation Scale & Heavy Rock Concerts.
+            © {new Date().getFullYear()} Pirate Productions Nashville LLC. All Rights Reserved.
           </div>
           <div className="flex items-center gap-4">
             <span className="hover:text-amber-400 cursor-pointer">OSHA 30 Certified</span>

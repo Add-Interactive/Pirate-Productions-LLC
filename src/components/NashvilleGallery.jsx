@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-import { 
-  Award, ShieldCheck, MapPin, ZoomIn, CheckCircle2, 
-  ExternalLink, Sparkles, X, ChevronRight 
-} from 'lucide-react';
+import { MapPin, ZoomIn, X, Camera } from 'lucide-react';
 import { sound } from '../utils/sound';
 
 export default function NashvilleGallery() {
@@ -35,30 +32,7 @@ export default function NashvilleGallery() {
       location: 'Geodis Park • Nashville, TN',
       image: '/assets/audio_video_foh.jpg',
       category: 'AUDIO & VIDEO',
-      crewStaffed: '14 FOH Engineers, Dante Specialists & Broadcast Camera Operators'
-    }
-  ];
-
-  const certificationsList = [
-    {
-      title: 'ETCP CERTIFIED ARENA RIGGERS',
-      desc: 'Entertainment Technician Certification Program (ETCP) Arena Rigging Credentials & High Steel Specialist Certifications.',
-      badge: 'ETCP ARENA RIGGING'
-    },
-    {
-      title: 'OSHA 30 & 10 SAFETY LEADERSHIP',
-      desc: '100% of Lead Riggers and Production Supervisors carry OSHA 30-Hour Construction Safety credentials.',
-      badge: 'OSHA 30 COMPLIANT'
-    },
-    {
-      title: 'HEAVY MACHINERY OPERATOR LICENSES',
-      desc: 'Certified cards for Telehandlers (Lulls), Forklifts (Class 4/5/7), Scissor Lifts (Type 3a), and High Boom Lifts (Type 3b).',
-      badge: 'JLG & GENIE CARDED'
-    },
-    {
-      title: 'DANTE LEVEL 3 AUDIO NETWORKING',
-      desc: 'Audinate Dante Level 3 Certification for complex multi-channel stadium digital audio distribution.',
-      badge: 'AUDINATE DANTE L3'
+      crewStaffed: '14 FOH Mixers, Dante Specialists & Broadcast Camera Operators'
     }
   ];
 
@@ -69,19 +43,19 @@ export default function NashvilleGallery() {
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-mono text-xs uppercase tracking-widest">
-            <MapPin className="w-3.5 h-3.5" />
-            <span>NASHVILLE & STADIUM SHOWCASE</span>
+            <Camera className="w-3.5 h-3.5" />
+            <span>PRODUCTION ACTION SHOWCASE</span>
           </div>
           <h2 className="font-heading text-4xl sm:text-6xl text-white font-extrabold tracking-wider uppercase">
-            MUSIC CITY'S <span className="text-amber-500 gold-glow-text">LIVE PRODUCTION</span> TITAN
+            STAGE & RIGGING <span className="text-amber-500 gold-glow-text">PORTFOLIO</span>
           </h2>
           <p className="max-w-3xl mx-auto text-zinc-400 text-base sm:text-lg">
-            From Nissan Stadium to Bridgestone Arena, see Pirate Productions in action powering North America's largest stadium tours, festivals, and live events.
+            A visual glimpse into Pirate Productions executing arena load-ins, high steel rigging, line array audio setups, and stadium stage strikes.
           </p>
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {galleryItems.map((item, idx) => (
             <div 
               key={idx}
@@ -127,39 +101,6 @@ export default function NashvilleGallery() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Certifications & Industry Compliance Block */}
-        <div className="p-8 rounded-3xl bg-zinc-950 border border-amber-500/40 space-y-8 glass-panel shadow-2xl">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-zinc-800 pb-6">
-            <div>
-              <div className="flex items-center gap-2 text-amber-400 font-heading text-xl">
-                <ShieldCheck className="w-6 h-6" />
-                <span>SAFETY & CERTIFICATION COMPLIANCE</span>
-              </div>
-              <h3 className="font-heading text-4xl text-white tracking-wider">
-                100% CERTIFIED CREW LEADERSHIP
-              </h3>
-            </div>
-            <div className="px-4 py-2 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 font-mono text-xs">
-              ⚡ ZERO SAFETY INCIDENTS IN 2,800+ SHOWS
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {certificationsList.map((cert, idx) => (
-              <div key={idx} className="p-5 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-3 hover:border-amber-500/40 transition-colors">
-                <div className="flex items-center justify-between">
-                  <Award className="w-6 h-6 text-amber-400" />
-                  <span className="px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 font-mono text-[10px] font-bold">
-                    {cert.badge}
-                  </span>
-                </div>
-                <h4 className="font-heading text-xl text-white tracking-wider">{cert.title}</h4>
-                <p className="text-zinc-400 text-xs leading-relaxed">{cert.desc}</p>
-              </div>
-            ))}
-          </div>
         </div>
 
       </div>
